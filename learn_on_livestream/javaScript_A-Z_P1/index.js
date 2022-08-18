@@ -1,75 +1,105 @@
-/**
-    TOÁN TỬ
+// CÁC LỆNH CĂN BẢN
 
-- CƠ BẢN
-    + phép cộng, ghép chuỗi
-    % phép lấy phần dư
-    sự khác biệt giữa - / * % và +
-    ++ tăng 1 đơn vị
-    -- giảm 1 đơn vị
-    ** phép nhân mũ
 
-- SO SÁNH
-    < , > , <= , >= , != 
-    ==  so sánh về giá trị
-    === so sánh về giá trị và kiểu dữ liệu
-    !   toán tử phủ định
+// kiểu 1
+if (5 > 4) {
+    //vao day
+} else {
+    // false vao day
+}
 
-- LOGIC
-    And
-    Or
-    toán tử 3 ngôi
-    True, False và các giá trị tương đương
- */
+// kiểu 2
+if (5 > 4) {
 
-let number1 = "Hiep dep trai sieu cap" + 1;;
-console.log(number1);
+}
 
-//  lỗi NaN
-let number2 = "Hiep dep trai sieu cap" - 1;;
-console.log(number2);
+// kiểu 3
+if (5 < 4) {
+    //dung thi vao day
+} else if (5 > 4) {
 
-let number3 = "9" - "1"; // = 8
-console.log(number3);
+}
 
-let number4 = "9" + "1"; // = 91
-console.log(number4);
+// kiểu 4
+if (5 > 4) {
+    if (5 < 4) {
+        if (5 == 4) {
 
+        }
+    }
+}
 
 ////////////////////////////////////////////////////////
+for (var x = 0; x < 10; x++) {
+    console.log(x)
+}
 
-// lấy phần dư
-let soDu = 10 % 3;
-console.log(soDu);
+console.log("-----------")
 
-let number5 = 10;
-// number += 1;
-var number6 = number5++;
+var arr1 = [1, 2, 3, 4, 5];
 
-console.log(number5); // 11;
-console.log(number6); // 10
+for (var i = 0; i < 10; i++) {
+    console.log(arr1[i]);
+}
 
-let number7 = 0;
-var ketqua = number7++ + ++number7 + number7++;
-// 0         2           2
-console.log(ketqua); //  4
-console.log(number7); // 3
+console.log("-----------")
 
-// Số Mũ
-var x = 10 ** 3; // 10^3
-console.log(x)
+for (var giatri in arr1) {
+    console.log(giatri)
+}
+
+console.log("-----------")
 
 
-// XỬ LÝ SAU SỐ THỰC
-var y = 0.1 + 0.2; // 0.30000000000000004
-console.log(y);
-// cách xử lý
-var yy = (0.1 * 10 + 0.2 * 10) / 10; // 0.3 => nhân với số tròn để đưa về số nguyên
-console.log(yy);
+var myObject = {
+    name: 'hiep',
+    age: 24
+}
+for (var key in myObject) {
+    console.log(key)
+}
 
-//--------------
-console.log(5 === "5"); // false - so sánh cả kiểu dữ liệu
-console.log(5 == "5"); // true 
+console.log("------while-- break---")
 
+while (true) {
+    console.log('lap');
+    break;
+}
 
-////////////////////////////////////////////////////////;
+console.log("------while--continue---")
+
+var arr2 = [1, 2, 3, 4, 5];
+
+for (var i = 0; i < 10; i++) {
+    if (arr2[i] == 3) {
+        continue;
+    };
+    console.log(arr1[i]);
+}
+
+console.log("------switch--case-----")
+
+var y = 2;
+switch (y) {
+    case 1:
+        console.log(1);
+        break;
+    case 2:
+        console.log(2);
+        break;
+
+    case 3:
+        console.log(3);
+        break;
+
+    case 4:
+        console.log(4);
+        break;
+
+    case 5:
+        console.log(5);
+        break;
+
+    default:
+        console.log('mac dinh')
+}
