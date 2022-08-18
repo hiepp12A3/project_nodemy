@@ -1,58 +1,75 @@
 /**
-KIỂU BIẾN - KIỂU DŨ LIỆU
+    TOÁN TỬ
 
-    undedined
-    null
-    String
-    Number
-    Object => giá trị chung 
-    Array
-    Boolean
+- CƠ BẢN
+    + phép cộng, ghép chuỗi
+    % phép lấy phần dư
+    sự khác biệt giữa - / * % và +
+    ++ tăng 1 đơn vị
+    -- giảm 1 đơn vị
+    ** phép nhân mũ
+
+- SO SÁNH
+    < , > , <= , >= , != 
+    ==  so sánh về giá trị
+    === so sánh về giá trị và kiểu dữ liệu
+    !   toán tử phủ định
+
+- LOGIC
+    And
+    Or
+    toán tử 3 ngôi
+    True, False và các giá trị tương đương
  */
 
-// TRUY XUẤT KIỂU OBJECT
-
-var person = {
-    name: 'hiepdeptrai',
-    address: 'ha noi',
-    teacher: {
-        name: 'anh dan'
-    },
-    key: 'abc'
-};
-// các kiểu truy xuất
-console.log(person);
-console.log(person.name)
-console.log(person['teacher'])
-
-// truy xuất bằng vòng for(),
-for (var key in person) {
-    console.log(key);
-}
-
-var listPerson = [
-    { name: 'Hiep' },
-    { name: 'Hòa' }
-];
-console.log(listPerson)
-
-
-// TRUY XUẤT KIỂU ARRAY
-var listNumber = [1, 2, 3, 4, 5];
-// lấy p.tử đầu tiên
-console.log(listNumber[0]);
-// lấy tổng sô phần tử
-console.log(listNumber.length);
-// lấy p.tử cuối
-console.log([listNumber.length - 1])
-
-// BOOLEAN
-var isDeveloper = false;
-
-
-// CÓ 3 CÁCH KHAI BÁO BIẾN
-
-let number1 = 999;
-// const là hằng số - khi đã khai báo ko thể sửa lại
-const number2 = 10;
+let number1 = "Hiep dep trai sieu cap" + 1;;
 console.log(number1);
+
+//  lỗi NaN
+let number2 = "Hiep dep trai sieu cap" - 1;;
+console.log(number2);
+
+let number3 = "9" - "1"; // = 8
+console.log(number3);
+
+let number4 = "9" + "1"; // = 91
+console.log(number4);
+
+
+////////////////////////////////////////////////////////
+
+// lấy phần dư
+let soDu = 10 % 3;
+console.log(soDu);
+
+let number5 = 10;
+// number += 1;
+var number6 = number5++;
+
+console.log(number5); // 11;
+console.log(number6); // 10
+
+let number7 = 0;
+var ketqua = number7++ + ++number7 + number7++;
+// 0         2           2
+console.log(ketqua); //  4
+console.log(number7); // 3
+
+// Số Mũ
+var x = 10 ** 3; // 10^3
+console.log(x)
+
+
+// XỬ LÝ SAU SỐ THỰC
+var y = 0.1 + 0.2; // 0.30000000000000004
+console.log(y);
+// cách xử lý
+var yy = (0.1 * 10 + 0.2 * 10) / 10; // 0.3 => nhân với số tròn để đưa về số nguyên
+console.log(yy);
+
+//--------------
+console.log(5 === "5"); // false - so sánh cả kiểu dữ liệu
+console.log(5 == "5"); // true 
+
+
+////////////////////////////////////////////////////////;
