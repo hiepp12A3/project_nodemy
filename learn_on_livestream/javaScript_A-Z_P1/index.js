@@ -1,105 +1,46 @@
-// CÁC LỆNH CĂN BẢN
+// FUNCTION
 
+/*
+    Function  tenham(tham số 1, tham số 2) {logic và return}
+    Function vô danh
+    Function tự chạy (self invokle)
+    Higher order function và curry
+    Lưu ý:
+        function phải có return để trả về kết quả ra ngoài
+        function không có return sẽ trả về undifned
+        function viết 1 lần để tái sử dụng về sau
+*/
+// function cong(number1, number2) {
+//     return function() {
+//         console.log("hế luu")
+//     }
+// }
 
-// kiểu 1
-if (5 > 4) {
-    //vao day
-} else {
-    // false vao day
-}
+// var x = cong(1, 8);
 
-// kiểu 2
-if (5 > 4) {
+// x()
 
-}
+////////////////////////////////////////////////////////
 
-// kiểu 3
-if (5 < 4) {
-    //dung thi vao day
-} else if (5 > 4) {
+// function vô danh 
+//  () ở cuối là gọi luôn function
+// (function(number1, number2) {
+//     console.log("hiep dep trai sieu cap")
+//     return 9
+// })()
 
-}
+////////////////////////////////////////////////////////
 
-// kiểu 4
-if (5 > 4) {
-    if (5 < 4) {
-        if (5 == 4) {
+function caocap1() {
+    return function() {
+
+        return function() {
 
         }
     }
 }
+caocap1()()() // curry
 
-////////////////////////////////////////////////////////
-for (var x = 0; x < 10; x++) {
-    console.log(x)
-}
-
-console.log("-----------")
-
-var arr1 = [1, 2, 3, 4, 5];
-
-for (var i = 0; i < 10; i++) {
-    console.log(arr1[i]);
-}
-
-console.log("-----------")
-
-for (var giatri in arr1) {
-    console.log(giatri)
-}
-
-console.log("-----------")
-
-
-var myObject = {
-    name: 'hiep',
-    age: 24
-}
-for (var key in myObject) {
-    console.log(key)
-}
-
-console.log("------while-- break---")
-
-while (true) {
-    console.log('lap');
-    break;
-}
-
-console.log("------while--continue---")
-
-var arr2 = [1, 2, 3, 4, 5];
-
-for (var i = 0; i < 10; i++) {
-    if (arr2[i] == 3) {
-        continue;
-    };
-    console.log(arr1[i]);
-}
-
-console.log("------switch--case-----")
-
-var y = 2;
-switch (y) {
-    case 1:
-        console.log(1);
-        break;
-    case 2:
-        console.log(2);
-        break;
-
-    case 3:
-        console.log(3);
-        break;
-
-    case 4:
-        console.log(4);
-        break;
-
-    case 5:
-        console.log(5);
-        break;
-
-    default:
-        console.log('mac dinh')
-}
+// function caocap2(f1) {
+//     f1() return 9
+// }
